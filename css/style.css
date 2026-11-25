@@ -1,0 +1,437 @@
+/* Bundled fonts (work offline, no Google Fonts needed) */
+@font-face{font-family:"Ballet";src:url("../fonts/ballet-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Pinyon Script";src:url("../fonts/pinyon-script-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("../fonts/cormorant-garamond-500-italic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:swap}
+:root{--navy:#1f3f6e;--french:#5b7fb0;--dusty:#8ea9c8;--light:#cfe3f3;--champagne:#e2cda9;--ivory:#f8f0e4;--gold:#b8955a;--paper:#fbfcfe;--ink:#24385a;
+box-sizing:border-box;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;line-height:1.6;
+background-image:radial-gradient(60% 30% at 8% 4%,#cfe0f2,transparent 70%),radial-gradient(45% 25% at 98% 28%,#dbe8f6,transparent 70%),radial-gradient(55% 30% at 4% 55%,#d5e4f4,transparent 70%),radial-gradient(50% 30% at 96% 80%,#cddff1,transparent 70%),radial-gradient(60% 25% at 20% 100%,#e6eef8,transparent 70%)}
+body.locked{overflow:hidden}
+.script{font-family:"Pinyon Script","Apple Chancery",cursive;font-weight:400;color:var(--navy)}
+.frame{margin:1rem;border:1px solid var(--navy);outline:1px solid var(--gold);outline-offset:5px;position:relative;overflow:hidden;background:rgba(255,255,255,.5)}
+.frame::before,.frame::after{content:"";position:absolute;width:46px;height:46px;border:1px solid var(--gold);pointer-events:none}
+.frame::before{top:10px;left:10px;border-right:0;border-bottom:0}.frame::after{bottom:10px;right:10px;border-left:0;border-top:0}
+section{position:relative;max-width:660px;margin:0 auto;padding:4.5rem 1.6rem;text-align:center}
+section+section::before{content:"";display:block;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);margin:-3rem auto 2rem}
+.sprig{position:absolute;pointer-events:none;width:200px;height:200px}
+.sa{top:-6px;right:-10px}.sb{bottom:-6px;left:-10px;transform:rotate(180deg)}
+.sc{top:30px;left:-60px;width:140px;height:140px;transform:scaleX(-1);opacity:.8}.sd{bottom:30px;right:-60px;width:140px;height:140px;transform:scaleY(-1);opacity:.8}
+.small{font-size:1.4rem;margin:0}
+h1{margin:.2rem 0;font-size:clamp(3.8rem,18vw,6.4rem);line-height:.95}
+.amp{font-size:2.6rem;display:block;margin:-.1rem 0;color:var(--gold)}
+.orn{display:flex;align-items:center;gap:.8rem;max-width:400px;margin:1.6rem auto;color:var(--gold)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+.date{font-size:1.75rem;font-weight:600;color:var(--navy);margin:0}
+.time{letter-spacing:.4em;color:var(--navy);margin:0 0 1.2rem}
+.count{display:flex;justify-content:center;gap:.7rem;margin-top:1.4rem}
+.count div{width:74px;padding:.6rem 0;border:1px solid var(--dusty);border-radius:40px 40px 8px 8px;background:rgba(255,255,255,.7)}
+.count strong{display:block;font-size:2.1rem;color:var(--navy);font-weight:600;line-height:1}
+.count span{font-size:.95rem;font-style:italic}
+h2{font-size:clamp(2.7rem,11vw,3.8rem);margin:0 0 .3rem;line-height:1.1}
+.card{margin:1.4rem auto;padding:1.8rem 1.2rem;max-width:430px;border:1px solid var(--dusty);border-radius:180px 180px 14px 14px;background:linear-gradient(#fff,#f1f7fd);position:relative;box-shadow:0 10px 24px rgba(31,63,110,.08)}
+.card::after{content:"";position:absolute;inset:6px;border:1px solid rgba(184,149,90,.5);border-radius:174px 174px 9px 9px;pointer-events:none}
+.card svg.ic{width:34px;height:34px;color:var(--french);margin-bottom:.2rem}
+.card .script{font-size:2rem;display:block;line-height:1.2}
+.card b{display:block;font-size:1.5rem;color:var(--navy);font-weight:600}
+.btn{display:inline-block;margin:.4rem .2rem 0;padding:.45rem 1.3rem;border:1px solid var(--navy);color:var(--navy);text-decoration:none;font-size:1rem;border-radius:999px;transition:background .2s,color .2s}
+.btn:hover,.btn:focus-visible{background:var(--navy);color:#fff;outline:none}
+.btn.fill{background:var(--navy);color:#fff}.btn.fill:hover{background:var(--french)}
+.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:.4rem;max-width:560px;margin:2.4rem auto 1.4rem}
+.sw{min-width:0}
+.dot{width:100%;max-width:92px;aspect-ratio:1;margin:0 auto .7rem;border-radius:50%;border:1px solid rgba(31,63,110,.25);box-shadow:inset 0 0 0 5px rgba(255,255,255,.6),0 8px 16px rgba(31,63,110,.15);position:relative}
+.dot::after{content:"";position:absolute;inset:-5px;border:1px dashed var(--gold);border-radius:50%;opacity:.8}
+.sw b{display:block;font-weight:600;color:var(--navy);line-height:1.2;font-size:clamp(.78rem,3.1vw,1.2rem)}
+.note{font-size:1.05rem;max-width:460px;margin:1.4rem auto 0;font-style:italic}
+footer{text-align:center;padding:1rem 1.5rem 3.4rem;position:relative}
+footer .script{font-size:2.4rem}
+.dust{position:fixed;top:-20px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:.45;pointer-events:none;z-index:5;animation:fall linear infinite;box-shadow:0 0 6px var(--champagne)}
+@keyframes fall{to{transform:translate(40px,110vh)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+
+#env{position:fixed;inset:0;z-index:50;display:grid;place-items:center;overflow:hidden;text-align:center;padding:1.5rem;transition:opacity 1s,visibility 1s;
+background:radial-gradient(38% 9% at 18% 14%,rgba(255,255,255,.85),transparent),radial-gradient(34% 8% at 82% 26%,rgba(255,255,255,.7),transparent),radial-gradient(50% 7% at 40% 40%,rgba(255,255,255,.5),transparent),linear-gradient(#d9e9f7 0%,#c6dcf0 52%,#b4cde6 53.5%,#c8dbec 64%,#a3bfda 100%)}
+#env.gone{opacity:0;visibility:hidden}
+.stage{position:relative;z-index:2}
+.ttl{color:var(--navy);margin:0}.ttl i{display:block;font-size:1.1rem;letter-spacing:.08em}
+.ttl .script{display:block;font-size:clamp(2.7rem,13vw,3.8rem);line-height:1.1}
+.env{position:relative;width:min(82vw,420px);aspect-ratio:400/276;margin:1.8rem auto 0;filter:drop-shadow(0 22px 26px rgba(31,63,110,.32))}
+.env>svg.l{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.env .back{z-index:0}
+.env .front{z-index:3}
+.env .fl{z-index:4;transform-origin:50% 0;transition:transform .7s,z-index 0s .35s}
+.seal{position:absolute;left:50%;top:62%;width:76px;height:76px;margin:-38px 0 0 -38px;z-index:6;border:0;cursor:pointer;display:grid;place-items:center;
+border-radius:48% 52% 50% 50%/52% 48% 52% 48%;background:radial-gradient(circle at 35% 28%,#fcf8ee,#ece0c8 58%,#d9c9aa);
+box-shadow:0 4px 9px rgba(35,55,90,.4),inset 0 -3px 5px rgba(150,128,92,.35),inset 0 2px 3px rgba(255,255,255,.9);transition:opacity .4s;animation:pulse 2.4s ease-in-out infinite}
+.seal::before{content:"";position:absolute;inset:8px;border-radius:50%;border:1.5px solid rgba(160,138,100,.5);box-shadow:1px 1px 1px rgba(255,255,255,.9),inset 1px 1px 1px rgba(150,128,92,.4)}
+.seal span{font-family:"Pinyon Script",cursive;font-size:1.9rem;line-height:1;color:#e6dac1;text-shadow:-1px -1px 1px rgba(255,255,255,.95),1px 1px 1px rgba(140,118,84,.75)}
+.seal:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+@keyframes pulse{50%{transform:scale(1.07)}}
+#env.opening .fl{transform:rotateX(180deg);z-index:1}
+#env.opening .seal{opacity:0;animation:none;pointer-events:none}
+.tap{margin-top:2.4rem;color:var(--navy);font-style:italic;transition:opacity .4s}
+#env.opening .tap{opacity:0}
+@media(max-width:480px){.sprig{width:140px;height:140px}.sc,.sd{width:90px;height:90px;left:-35px}.sd{right:-35px;left:auto}.count div{width:66px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dust,.seal{animation:none}.dust{display:none}.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01s!important}}
+#env{background:radial-gradient(circle at 50% 38%,#f8fbfe,#c9dcef)}
+.env .fl{position:absolute;inset:0;transform-style:preserve-3d}
+.fl svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.fl .fb{transform:rotateX(180deg)}
+.seal{background:radial-gradient(circle at 35% 28%,#f1e2c4,#e2cda9 60%,#cdb68c)}
+.seal::before{border-color:rgba(150,125,85,.55)}
+.seal::after{content:"";position:absolute;inset:15px;border-radius:50%;border:1px solid rgba(150,125,85,.4);box-shadow:1px 1px 1px rgba(255,255,255,.7)}
+.seal svg{position:relative;z-index:1;width:22px;height:22px;fill:#e9d9b8;filter:drop-shadow(-1px -1px 0 rgba(255,255,255,.9)) drop-shadow(1px 1px 0 rgba(130,105,68,.7))}
+.frame{outline:none}.frame::before,.frame::after{display:none}
+section+section::before{display:none}
+.dot::after,.card::after{display:none}
+.rule{width:64px;height:1px;background:var(--gold);margin:1.6rem auto}
+#env{background:#fbfdff}
+.fimg{position:absolute;z-index:1;pointer-events:none;user-select:none}
+.ftl{top:0;left:0;width:min(58vw,400px)}
+.fbl{bottom:0;left:0;width:min(38vw,250px)}
+.fbr{bottom:0;right:0;width:min(32vw,210px)}
+.ttl{margin-bottom:.4rem;color:#14305c;text-shadow:0 0 8px #fff,0 0 14px #fff}.ttl i{font-weight:600}.tap{color:#14305c;font-weight:600;text-shadow:0 0 8px #fff,0 0 14px #fff}
+.seal{top:62%;width:80px;height:80px;margin:-40px 0 0 -40px;background:radial-gradient(circle at 35% 28%,#fff,#e5e7eb 60%,#c3c7ce);box-shadow:0 4px 9px rgba(10,30,60,.45),inset 0 -3px 5px rgba(120,128,140,.35),inset 0 2px 3px rgba(255,255,255,.95)}
+.seal::before{inset:7px;border-color:rgba(140,148,162,.6)}
+.seal::after{display:none}
+.seal svg{width:38px;height:38px;fill:none;filter:drop-shadow(-1px -1px 0 rgba(255,255,255,.95)) drop-shadow(1px 1px 0 rgba(110,118,132,.65))}
+.seal svg path{fill:#eef0f4;stroke:#aeb4bf;stroke-width:.9;stroke-linejoin:round}
+.seal svg path:first-child{fill:none;stroke-width:1.1}
+.env{width:min(92vw,560px)}
+.seal{width:92px;height:92px;margin:-46px 0 0 -46px}.seal svg{width:44px;height:44px}
+.ttl{transition:opacity .5s}#env.opening .ttl{opacity:0}
+.env .fl{transform-style:flat;transition:transform .8s ease,z-index 0s .4s}
+#env.opening .fl{transform:scaleY(-1);z-index:1}
+.fl svg{backface-visibility:visible;-webkit-backface-visibility:visible}
+.fl .fb{transform:none;opacity:0;transition:opacity 0s .4s}
+.fl .ff{transition:opacity 0s .4s}
+#env.opening .fl .ff{opacity:0}#env.opening .fl .fb{opacity:1}
+
+body{background:#fbfdff}
+.blob{position:fixed;border-radius:50%;filter:blur(64px);opacity:.55;z-index:-1;pointer-events:none;animation:drift 24s ease-in-out infinite alternate}
+.b1{width:340px;height:340px;background:#bcd3ec;top:-90px;left:-110px}.b2{width:320px;height:320px;background:#d3e2f2;top:42%;right:-120px;animation-delay:-9s}.b3{width:360px;height:360px;background:#c6daee;bottom:-120px;left:10%;animation-delay:-15s}
+@keyframes drift{to{transform:translate(50px,70px) scale(1.12)}}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--dusty),var(--navy));z-index:70}
+.nav{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:flex;gap:.1rem;padding:.3rem;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--dusty);border-radius:999px;box-shadow:0 8px 22px rgba(31,63,110,.18);opacity:0;pointer-events:none;transition:opacity .6s .4s}
+body:not(.locked) .nav{opacity:1;pointer-events:auto}
+.nav a{padding:.3rem .85rem;border-radius:999px;color:var(--navy);text-decoration:none;font-size:1rem;transition:background .25s,color .25s}
+.nav a.on{background:var(--navy);color:#fff}
+.site{max-width:700px;margin:0 auto;padding:1.2rem 1rem 6.5rem;position:relative}
+.sec{position:relative;text-align:center;padding:4rem 1.3rem;margin:1.1rem 0;background:rgba(255,255,255,.66);border:1px solid rgba(142,169,200,.55);border-radius:28px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);box-shadow:0 16px 36px rgba(31,63,110,.09);overflow:hidden}
+.sec>*:not(.hf){position:relative;z-index:2}
+.hero{padding:4.6rem 1.3rem 3.4rem}
+.hf{position:absolute;pointer-events:none;z-index:1;will-change:transform}
+.hf1{top:-12px;left:0;width:min(36%,215px)}.hf2{bottom:-12px;right:0;width:28%}.hf4{bottom:-12px;right:0;width:min(22%,120px)}
+#attire{padding-bottom:7rem}
+.hint{margin:1.6rem 0 0;font-style:italic;font-size:1rem;opacity:.8}.arr{display:block;font-style:normal;font-size:1.4rem;line-height:1;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+.cal{max-width:380px;margin:1.2rem auto;padding:1.2rem 1rem;background:#fff;border:1px solid var(--dusty);border-radius:20px}
+.mon{letter-spacing:.3em;font-weight:600;color:var(--navy);margin:0 0 .6rem}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:1.05rem}
+.grid span,.grid button{aspect-ratio:1;display:grid;place-items:center;border-radius:50%;font:inherit;border:0;background:none;color:var(--ink)}
+.grid .wd{font-size:.85rem;color:var(--french);font-weight:600}
+.grid .hl{background:var(--navy);color:#fff;cursor:pointer;font-weight:600;animation:beat 1.8s ease-in-out infinite;box-shadow:0 0 0 4px rgba(142,169,200,.4)}
+@keyframes beat{50%{transform:scale(1.12)}}
+.calinfo{max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .5s,margin .5s;color:var(--navy)}
+.calinfo.show{max-height:90px;opacity:1;margin-top:.9rem}
+.tapnote{font-style:italic;font-size:.95rem;margin:.6rem 0 0;opacity:.75}
+.acc{max-width:440px;margin:1rem auto;border:1px solid var(--dusty);border-radius:22px;background:#fff;overflow:hidden;transition:box-shadow .3s}
+.acc.open{box-shadow:0 12px 26px rgba(31,63,110,.14)}
+.ah{all:unset;box-sizing:border-box;display:block;width:100%;padding:1.3rem 3rem 1.2rem 1.2rem;cursor:pointer;position:relative;text-align:center}
+.ah:focus-visible{outline:2px solid var(--navy);outline-offset:-4px}
+.ah .script{display:block;font-size:2rem;line-height:1.2}.ah b{display:block;font-size:1.4rem;color:var(--navy);font-weight:600}
+.pl{position:absolute;right:1.1rem;top:50%;width:28px;height:28px;margin-top:-14px;border:1px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--navy);transition:transform .35s,background .3s,color .3s}
+.acc.open .pl{transform:rotate(45deg);background:var(--navy);color:#fff}
+.ap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s}.acc.open .ap{grid-template-rows:1fr}
+.ap>div{overflow:hidden;padding:0 1.2rem}.acc.open .ap>div{padding-bottom:1.3rem}.ap p{margin:.2rem 0 .4rem}
+.det-hide{display:none}
+.palette{max-width:560px;margin:1.8rem auto 1rem}
+button.sw{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;min-width:0}
+button.sw:focus-visible .dot{outline:2px solid var(--navy);outline-offset:4px}
+.sw .dot{transition:transform .3s,box-shadow .3s}.sw:hover .dot{transform:scale(1.07)}
+.sw.sel .dot{transform:scale(1.15);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--navy),0 10px 18px rgba(31,63,110,.2)}
+.sw b{display:block;margin-top:.5rem}
+.pv{max-width:460px;margin:1.2rem auto;padding:2.2rem 1rem;border-radius:20px;border:1px solid rgba(31,63,110,.15);transition:background .5s,color .5s;display:grid;place-items:center}
+.pv .script{font-size:2.6rem;color:inherit}
+.end{text-align:center;padding:1.4rem 1rem 1rem}.end .script{font-size:2.4rem}.end .btn{margin-top:1rem}
+.heart{position:fixed;z-index:80;pointer-events:none;color:#c97b8d;font-size:1.4rem;animation:rise 1.8s ease-out forwards}
+@keyframes rise{to{transform:translate(var(--x),-170px) scale(1.3);opacity:0}}
+@media(prefers-reduced-motion:reduce){.blob,.arr,.grid .hl{animation:none}.heart{display:none}}
+
+.sec::before{content:"";position:absolute;inset:8px;border:1px solid rgba(184,149,90,.38);border-radius:21px;pointer-events:none}
+.hero::before{display:none}
+.orn2{display:flex;align-items:center;gap:.7rem;max-width:240px;margin:.2rem auto 1.5rem;color:var(--gold);font-size:.7rem}
+.orn2::before,.orn2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.orn2::after{transform:scaleX(-1)}
+.arch2{position:relative;max-width:400px;margin:0 auto 1.6rem;padding:5.2rem 1.2rem 1.6rem;background:#fff;border:1px solid var(--dusty);border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:0 14px 28px rgba(31,63,110,.1)}
+.arch2::after{content:"";position:absolute;inset:7px;border:1px solid rgba(184,149,90,.5);border-radius:193px 193px 18px 18px;pointer-events:none}
+.arch2 .wash{position:absolute;inset:0 0 40% 0;background:linear-gradient(#cddced,rgba(205,220,237,0));z-index:0}
+.arch2 .ha{top:6%;left:-3%;width:min(36%,138px)}
+.arch2>*:not(.hf):not(.wash){position:relative;z-index:2}
+.mon{margin:0;letter-spacing:.4em;font-weight:600;color:var(--navy);font-size:1.15rem}.yr{margin:0 0 .8rem;letter-spacing:.3em;font-size:.95rem}
+.ah{padding-top:1.2rem}.ic2{width:34px;height:26px;color:var(--french);display:block;margin:0 auto .2rem}
+.tm{display:block;font-style:italic;font-size:.95rem;margin-top:.15rem}
+.vline{height:58px;display:grid;place-items:center;position:relative}
+.vline::before{content:"";position:absolute;top:0;bottom:0;width:1px;background:repeating-linear-gradient(var(--gold) 0 4px,transparent 4px 9px)}
+.vline i{width:10px;height:10px;background:var(--gold);transform:rotate(45deg);position:relative}
+
+.pf{position:absolute;top:12px;left:-6px;width:78px;z-index:2;pointer-events:none}
+.pvw{overflow:hidden;width:210px;margin:1.6rem auto 1.4rem;padding:2.2rem 0 1.2rem;border:1px solid var(--dusty);border-radius:105px 105px 16px 16px;background:#fff;display:flex;flex-direction:column;align-items:center;gap:.6rem;position:relative;box-shadow:0 12px 24px rgba(31,63,110,.1)}
+.pvw::after{content:"";position:absolute;inset:6px;border:1px solid rgba(184,149,90,.5);border-radius:99px 99px 11px 11px;pointer-events:none}
+.pvc{width:128px;height:128px;border-radius:50%;border:1px solid rgba(31,63,110,.2);box-shadow:inset 0 0 0 6px rgba(255,255,255,.6),0 12px 22px rgba(31,63,110,.2);transition:background .5s}
+.pvw .script{font-size:2.1rem}
+#attire{padding-bottom:9rem}
+.env .lacep{z-index:5;pointer-events:none}
+.seal.fly,#env.opening .seal{opacity:1;animation:fly 1.3s cubic-bezier(.5,0,.8,.4) forwards;pointer-events:none}
+@keyframes fly{0%{transform:scale(1) rotate(0)}20%{transform:scale(1.28) rotate(150deg)}100%{transform:translate(38vw,-78vh) scale(.25) rotate(1000deg);opacity:0}}
+.smoke{position:absolute;left:50%;top:62%;width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(207,223,242,.65) 55%,transparent 72%);filter:blur(7px);z-index:7;pointer-events:none;opacity:0;animation:puff 2.8s ease-out forwards}
+@keyframes puff{0%{opacity:0;transform:translate(0,0) scale(.3)}18%{opacity:.95}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(3.4)}}
+.spark{position:absolute;left:50%;top:62%;width:5px;height:5px;margin:-2px;border-radius:50%;background:#ecd291;box-shadow:0 0 8px #f6e4a8;z-index:8;pointer-events:none;opacity:0;animation:spk 1.6s ease-out forwards}
+@keyframes spk{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(var(--dx),var(--dy))}}
+.env .fl{transition:transform 1.6s cubic-bezier(.4,0,.2,1),z-index 0s .8s}
+.fl .fb,.fl .ff{transition:opacity 0s .8s}
+@media(prefers-reduced-motion:reduce){.smoke,.spark{display:none}}
+.acc{position:relative}
+.af{position:absolute;pointer-events:none;z-index:0;max-width:none}
+.af-tl{top:0;left:0;width:min(28%,120px)}
+.af-br{bottom:0;right:0;width:min(28%,120px)}
+.ah{z-index:1}
+
+
+/* Mobile browser and touch-target refinements */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-height:100vh;min-height:100svh}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.nav{padding:max(.3rem,env(safe-area-inset-bottom,0px)) .3rem}
+.nav a{min-height:40px;display:flex;align-items:center;justify-content:center}
+.ah,.seal,.btn,.sw{touch-action:manipulation}
+@media(max-width:600px){
+  .site{padding-left:.8rem;padding-right:.8rem}
+  .sec{padding-left:1rem;padding-right:1rem}
+  .nav{width:max-content;max-width:calc(100vw - 20px)}
+  .nav a{padding:.45rem .72rem;font-size:.94rem}
+  .seal{width:82px;height:82px;margin:-41px 0 0 -41px}
+}
+
+
+/* Refined stationery details requested for the envelope, calendar, and attire guide */
+/* The first page keeps its clean pale-blue paper backdrop; layered light gives it a softer printed-paper feel. */
+#env{background:radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.98) 0%,rgba(250,252,255,.96) 48%,rgba(229,239,249,.92) 100%),linear-gradient(135deg,#f8fbff,#e8f1fa)}
+#env::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(0deg,rgba(55,83,120,.018) 0,rgba(55,83,120,.018) 1px,transparent 1px,transparent 4px);mix-blend-mode:multiply}
+.stage{z-index:2}
+
+.ttl i{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;letter-spacing:.12em;font-size:1.2rem;color:#294a78;text-shadow:0 1px 0 rgba(255,255,255,.9)}
+.env{filter:drop-shadow(0 18px 24px rgba(31,63,110,.24))}
+.env .front path:first-child{filter:drop-shadow(0 1px 1px rgba(255,255,255,.18))}
+.seal{width:104px;height:104px;margin:-52px 0 0 -52px;padding:0;border:0;background:transparent;border-radius:50%;box-shadow:0 5px 12px rgba(30,45,70,.22);overflow:visible;animation:pulse 2.8s ease-in-out infinite}
+.seal::before,.seal::after{display:none}
+.seal img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;filter:drop-shadow(0 2px 2px rgba(70,65,58,.2))}
+.seal:focus-visible{outline:2px solid var(--navy);outline-offset:5px}
+.arch2 .ha{top:3%;left:-2%;width:min(43%,164px);transform:rotate(-5deg);transform-origin:top left;opacity:.96}
+.pvw{padding-top:2.2rem}
+.pf{top:auto;left:auto;right:-10px;bottom:-10px;width:96px;max-height:142px;object-fit:contain;object-position:bottom right;transform:rotate(-7deg);opacity:.96}
+@media(max-width:600px){.seal{width:92px;height:92px;margin:-46px 0 0 -46px}.arch2 .ha{width:min(44%,145px)}.pf{width:82px;right:-8px;bottom:-8px}}
+
+
+/* Requested envelope image replacement: retain the existing seal and opening interaction. */
+.env{aspect-ratio:648/467}
+.env>svg.l,.env .fl{display:none}
+.env-art{position:absolute;display:block;pointer-events:none;user-select:none}
+.env-closed{inset:0;width:100%;height:100%;object-fit:fill;z-index:3;opacity:1;transition:opacity .65s ease}
+
+#env.opening .env-closed{opacity:0}
+#env.opening 
+@media(max-width:600px){.env{width:min(92vw,560px)}}
+
+
+/* ===== Type system =====
+   Names + subheadings : Ballet (flourished display script)
+   Section headings    : Pinyon Script (formal copperplate, stays legible)
+   Body, dates, labels : Cormorant Garamond                              */
+:root{--f-sub:"Ballet","Pinyon Script","Apple Chancery",cursive;--f-head:"Pinyon Script","Apple Chancery",cursive;--f-body:"Cormorant Garamond",Georgia,serif;--gold-text:#b8923f}
+body{font-family:var(--f-body)}
+.script{font-family:var(--f-sub);line-height:1.35}
+h2.script{font-family:var(--f-head);font-size:clamp(2.9rem,12vw,4.1rem);line-height:1.2}
+h1.script{font-size:clamp(3.3rem,16vw,5.6rem);line-height:1.3;margin:.1rem 0}
+.small.script{font-size:clamp(1.7rem,7vw,2.3rem);line-height:1.4}
+.lead{margin:.2rem 0 .6rem;font-style:italic;letter-spacing:.04em}
+.amp{font-family:var(--f-sub);color:var(--gold-text);font-size:clamp(2.2rem,9vw,3.2rem);line-height:1.1;margin:-.2rem 0 -.3rem}
+.ah .script{font-size:clamp(2.1rem,8vw,2.6rem);line-height:1.4}
+.pvw .script,.pv .script{font-size:clamp(1.9rem,7vw,2.3rem)}
+.end .script{font-size:clamp(1.9rem,8.4vw,2.8rem);line-height:1.5}
+.end-date{font-style:italic;font-weight:500;font-size:1.5rem;letter-spacing:.06em;color:var(--navy)}
+
+/* ===== Envelope screen ===== */
+#env{align-items:safe center;overflow-y:auto}
+.ttl{margin:0}
+.ttl .names{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:.35em;font-family:var(--f-sub);color:var(--navy);font-size:clamp(2.6rem,10.5vw,4.3rem);line-height:1.35;text-shadow:0 0 8px #fff,0 0 14px #fff}
+.ttl .nm{display:inline-block}
+.ttl .amp{font-size:.62em;margin:0;display:inline-block}
+.env{width:min(92vw,560px,max(240px,calc((100svh - 16rem) * 1.387)));margin-top:1.1rem}
+.env-closed{z-index:5}
+
+/* Seal sits on the flap tip, so it looks like it is holding the envelope shut */
+.seal{top:77%;left:51%;z-index:6}
+.smoke,.spark{top:77%;left:51%}
+.tap{margin:1.3rem 0 0;font-size:1.35rem;letter-spacing:.03em;font-style:italic;font-weight:500;position:relative;z-index:2}
+
+/* Open state: back flap -> card -> front pocket */
+.openset{position:absolute;left:50%;bottom:0;width:94%;aspect-ratio:291/315;transform:translateX(-50%);z-index:2;opacity:0;pointer-events:none;transition:opacity .7s ease}
+.env-back,.env-front{position:absolute;left:0;width:100%;height:auto;display:block;user-select:none;pointer-events:none}
+.env-back{top:0;height:100%;z-index:0}
+.env-front{bottom:0;z-index:2}
+.cardclip{position:absolute;inset:0;clip-path:inset(-10% -10% 0 -10%);z-index:1}
+.invite{position:absolute;left:12%;width:76%;bottom:0;transform:translateY(24%);transition:transform 2.2s cubic-bezier(.3,.7,.2,1) 1.1s}
+#env.opening .env-closed{opacity:0}
+#env.opening .openset{opacity:1}
+#env.opening .invite{transform:translateY(-13%)}
+@media(prefers-reduced-motion:reduce){.invite{transition-duration:.01s!important;transition-delay:0s!important}}
+
+/* spacing fixes for Ballet's tall flourishes */
+.hero h1 .amp{margin:.3rem 0 .9rem;line-height:1;font-size:clamp(2.3rem,9vw,3.2rem)}
+.small.script{font-size:clamp(2rem,8.5vw,2.6rem)}
+.ah .script{font-size:clamp(2.3rem,9vw,2.8rem);margin-top:.35rem}
+.ic2{margin-bottom:.5rem}
+.pvw .script{font-size:clamp(2.1rem,8vw,2.5rem);margin-top:.3rem}
+.pvw{padding-bottom:1.8rem}
+.end .script{font-size:clamp(2.1rem,9vw,3rem)}
+.ah .script{font-size:clamp(1.7rem,7vw,2.6rem)}
+
+/* ===== Hero: calmer sizes, closer to the Canva layout ===== */
+.hero{padding:3.6rem 1.3rem 3rem}
+.hero .small.script{font-size:clamp(1.5rem,5.6vw,2rem);line-height:1.3;margin:0}
+.hero .lead{font-size:clamp(.95rem,3.4vw,1.1rem);letter-spacing:.12em;margin:.3rem 0 .4rem}
+.hero h1.script{font-size:clamp(3rem,13vw,4.6rem);line-height:1.05;margin:0}
+.hero h1 .amp{font-family:var(--f-body);font-style:italic;font-weight:500;font-size:clamp(1.5rem,5vw,1.9rem);color:var(--gold-text);line-height:1;margin:.15rem 0 .1rem}
+.hero .lead+h1{margin-top:.2rem}
+.hero h1+p{font-size:1.05rem;margin-top:.6rem!important}
+/* same minimalist ampersand on the envelope screen */
+.ttl .amp{font-family:var(--f-body);font-style:italic;font-weight:500;font-size:.5em;line-height:1}
+.end .script{line-height:1.35}
+
+/* ===== Hero: calmer sizes (matches Canva layout) + minimalist ampersand ===== */
+.amp,.hero h1 .amp,.ttl .amp{font-family:"Pinyon Script","Apple Chancery",cursive;font-weight:400;color:var(--gold-text)}
+.hero{padding:4rem 1.3rem 3rem}
+.hero .small.script{font-size:clamp(1.6rem,5.6vw,2.1rem);line-height:1.3}
+.hero .lead{font-size:clamp(.95rem,3.4vw,1.1rem);letter-spacing:.06em;margin:.1rem 0 .4rem}
+.hero h1.script{font-size:clamp(2.9rem,11.5vw,4.3rem);line-height:1.2;margin:0}
+.hero h1 .amp{display:block;font-size:clamp(1.5rem,5vw,2rem);line-height:1;margin:.1rem 0 .1rem}
+.hero p[style],.hero .tag{font-size:1.05rem}
+.hero .date{font-size:1.5rem}
+.ttl .amp{font-size:.5em;line-height:1}
+.hero h1 .amp{font-size:clamp(2.1rem,7vw,2.7rem);margin:-.2rem 0 .55rem}
+
+/* ===== Envelope screen title (matches Canva: caps kicker + copperplate script names) ===== */
+.ttl i{font-style:normal;font-weight:500;text-transform:uppercase;letter-spacing:.24em;font-size:clamp(.85rem,3.2vw,1.1rem);margin-bottom:.2rem}
+.ttl .names{font-family:"Pinyon Script","Apple Chancery",cursive;font-size:clamp(2.4rem,9.5vw,3.9rem);line-height:1.25;column-gap:.3em;align-items:center}
+.ttl .amp{font-size:.8em;color:var(--gold-text)}
+
+/* Envelope screen title, matching the Canva layout: small caps line + script names */
+.ttl i{text-transform:uppercase;font-style:normal;font-weight:500;letter-spacing:.2em;font-size:clamp(.85rem,2.8vw,1.1rem);color:#294a78}
+.ttl .names{font-family:"Pinyon Script","Apple Chancery",cursive;font-size:clamp(2.4rem,9.5vw,3.9rem);line-height:1.25;column-gap:.3em;margin-top:.1rem}
+.ttl .amp{font-size:.8em;color:var(--gold-text)}
+
+
+/* ===== Invitation card: your enhanced image, original lettering ===== */
+.invite{aspect-ratio:1096/1136;filter:drop-shadow(0 3px 7px rgba(20,35,65,.3))}
+.invite .card-art{display:block;width:100%;height:100%}
+
+/* ===== Hero: smaller intro lines, more room before the names ===== */
+.hero .small.script{font-size:clamp(1.35rem,4.6vw,1.75rem);line-height:1.3}
+.hero .lead{font-size:clamp(.8rem,2.9vw,.95rem);letter-spacing:.05em;margin:.15rem 0 .2rem}
+.hero h1.script{margin-top:1.3rem}
+
+/* ===== Locations: italic small caps, like the Canva design ===== */
+.ah b{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:clamp(1rem,3.6vw,1.2rem);line-height:1.35}
+.calinfo b{font-style:normal}
+
+/* ===== New card flowers (from elements.pdf) ===== */
+.af-tl{width:min(29%,128px)}
+.af-br{width:min(30%,128px)}
+
+/* ===== Round 5 tweaks ===== */
+/* Envelope backdrop: soft white silk */
+#env{background:linear-gradient(rgba(250,252,255,.28),rgba(238,245,252,.4)),url("../images/envelope-bg.jpg") center/cover no-repeat}
+
+/* Hero: intro lines sit higher and a little smaller */
+.hero{padding-top:2.4rem}
+.hero .small.script{font-size:clamp(1.15rem,3.8vw,1.45rem)}
+.hero .lead{font-size:clamp(.74rem,2.5vw,.86rem);margin:.05rem 0 .1rem}
+.hero h1.script{margin-top:1.1rem}
+
+/* Locations: slightly smaller */
+.ah b{font-size:clamp(.86rem,3vw,1rem)}
+
+/* Card flowers fill the corners (transparent PNGs, flush with the card edges) */
+.af-tl{width:min(34%,170px);top:0;left:0}
+.af-br{width:min(26%,125px);bottom:0;right:0}
+
+/* ===== Final touches ===== */
+/* gold wax seal: natural irregular edge, sits on the flap tip */
+.seal{background:none!important;box-shadow:none!important;border-radius:0;width:96px;height:96px;margin:-48px 0 0 -48px;top:77%;left:51%}
+.seal::before,.seal::after{display:none!important}
+.seal img{border-radius:0;filter:drop-shadow(0 4px 5px rgba(10,20,45,.5))}
+@media(max-width:600px){.seal{width:84px;height:84px;margin:-42px 0 0 -42px}}
+
+/* hero: intro lines a little higher and smaller */
+.hero{padding-top:2.4rem}
+.hero .small.script{font-size:clamp(1.2rem,4.1vw,1.55rem)}
+.hero .lead{font-size:clamp(.74rem,2.6vw,.88rem);margin:0 0 .1rem}
+.hero h1.script{margin-top:1.1rem}
+
+/* locations: slightly smaller */
+.ah b{font-size:clamp(.88rem,3.1vw,1.02rem)}
+
+/* card flowers fill the corners (bleed past the edge, no gaps) */
+.af-tl{top:-2px;left:-2px;width:min(30%,138px)}
+.af-br{bottom:-2px;right:-2px;width:min(28%,128px)}
+
+/* ===== Cover title: Ballet names with the Ballet "&" (as in the earlier version you liked) ===== */
+#env .ttl i{font-style:italic;text-transform:none;letter-spacing:.14em;font-size:clamp(1rem,3vw,1.25rem);font-weight:500;color:#294a78}
+#env .ttl .names{font-family:var(--f-sub);font-size:clamp(2.6rem,10.5vw,4.3rem);line-height:1.35;column-gap:.3em}
+#env .ttl .nm{font-family:var(--f-sub)}
+#env .ttl .amp{font-family:var(--f-sub);font-size:.82em;line-height:1;color:var(--gold-text)}
+
+/* hero names: tighter stack */
+.hero h1.script{line-height:.98;margin-top:.7rem}
+.hero h1 .amp{margin:-.15rem 0 -.55rem;font-size:clamp(1.9rem,6.2vw,2.4rem);line-height:1}
+.hero h1.script{line-height:1.08;margin-top:1.1rem}
+.hero h1 .amp{margin:-.2rem 0 .35rem;font-size:clamp(1.8rem,5.8vw,2.3rem)}
+
+/* ===== Hero names: tighter stack, Winston nudged down ===== */
+.hero h1.script{line-height:.9;margin-top:1.9rem}
+.hero h1 .amp{margin:-.1rem 0 -.25rem;line-height:.9}
+.hero h1.script{line-height:1.08}
+.hero h1 .amp{margin:-.05rem 0 .15rem;line-height:1}
+
+
+/* ===== New open envelope (shown after tapping the seal) ===== */
+.openset{left:-11.7%;width:112.3%;aspect-ratio:1700/1657;transform:none}
+.openset{filter:drop-shadow(0 14px 18px rgba(20,35,65,.3))}
+.ol{position:absolute;inset:0;width:100%;height:100%;display:block;user-select:none;pointer-events:none}
+.ol-back{z-index:0}.ol-front{z-index:2}
+/* the contents are only visible above the pocket edge, so they appear to slide out from inside the envelope */
+.ol-clip{position:absolute;inset:0;z-index:1;clip-path:polygon(-12.00% -30.00%,112.00% -30.00%,112.00% 42.60%,97.29% 42.60%,97.06% 41.33%,95.59% 42.29%,94.12% 42.86%,92.65% 43.30%,91.18% 44.06%,89.71% 44.83%,88.24% 45.84%,86.76% 46.98%,85.29% 48.13%,83.82% 49.40%,82.35% 50.41%,80.88% 51.68%,79.41% 52.83%,77.94% 53.97%,76.47% 55.11%,75.00% 56.32%,73.53% 57.52%,72.06% 58.67%,70.59% 60.00%,69.12% 61.14%,67.65% 62.29%,66.18% 63.43%,64.71% 64.70%,63.24% 65.97%,61.76% 66.73%,60.29% 66.73%,58.82% 66.54%,57.35% 66.54%,55.88% 66.54%,54.41% 66.54%,52.94% 66.54%,51.47% 66.54%,50.00% 66.54%,48.53% 66.41%,47.06% 66.41%,45.59% 65.27%,44.12% 64.06%,42.65% 62.86%,41.18% 61.59%,39.71% 60.44%,38.24% 59.11%,36.76% 57.97%,35.29% 56.70%,33.82% 55.56%,32.35% 54.41%,30.88% 53.14%,29.41% 52.00%,27.94% 50.86%,26.47% 49.71%,25.00% 48.51%,23.53% 47.43%,22.06% 46.29%,20.59% 45.27%,19.12% 44.38%,17.65% 43.75%,16.18% 43.05%,14.71% 42.60%,13.24% 41.97%,11.76% 65.21%,-12.00% 65.21%)}
+.ol-contents{transform:translateY(64%);will-change:transform}
+#env.opening .ol-contents{transform:translateY(-3%);transition:transform 3.6s cubic-bezier(.33,.55,.3,1) .45s}
+@media(prefers-reduced-motion:reduce){#env.opening .ol-contents{transition-duration:.01s;transition-delay:0s}}
+
+/* ===== Flowers on the left, below the closed envelope ===== */
+.fbl{display:block;bottom:0;left:0;width:min(32vw,210px)}
+
+/* ===== Names: compact stack like the Canva design ===== */
+.hero h1.script{line-height:.8;margin-top:2.8rem}
+.hero h1 .amp{display:block;font-size:clamp(1.9rem,6vw,2.5rem);line-height:1;margin:.2rem 0 -.5rem;transform:translateX(1.6em);position:relative;z-index:2}
+#env .stage{transition:transform 1.2s ease}
+#env.opening .stage{transform:translateY(5svh)}
+
+/* no glow/puff over the open envelope: the contents simply slide out */
+.smoke,.spark,.burst,.glow{display:none!important}
+
+/* open envelope built from the supplied back / pocket / contents images (canvas 1700x1575) */
+.openset{left:-8.9%;width:108%;aspect-ratio:1700/1575;transform:none}

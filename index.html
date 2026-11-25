@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Winston &amp; Almira · Wedding Invitation</title>
+<link rel="preload" href="fonts/ballet-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+</defs></svg>
+
+<div id="env" role="dialog" aria-label="Open invitation">
+  <img class="fimg ftl" alt="" src="images/flower-top-left.png"><img class="fimg fbr" alt="" src="images/flower-bottom-right.png"><img class="fimg fbl" alt="" src="images/flower-bottom-left-cover.png">
+  <div class="stage">
+    <p class="ttl"><i>The wedding of</i><span class="names"><span class="nm">Winston</span><span class="amp">&amp;</span><span class="nm">Almira</span></span></p>
+    <div class="env">
+      <img class="env-art env-closed" src="images/envelope-closed.png" alt="Closed navy-blue wedding envelope">
+      <div class="openset" aria-hidden="true">
+        <img class="ol ol-back" src="images/env-back.png" alt="">
+        <div class="ol-clip"><img class="ol ol-contents" src="images/env-contents.png" alt=""></div>
+        <img class="ol ol-front" src="images/env-front.png" alt="">
+      </div>
+      <button class="seal" id="open" aria-label="Open the invitation"><img src="images/wax-seal-gold.png" alt=""></button>
+    </div>
+    <p class="tap">Tap the seal to open</p>
+  </div>
+</div>
+
+<div class="prog" id="prog"></div>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<nav class="nav" aria-label="Sections"><a href="#home" class="on">Home</a><a href="#when">Date</a><a href="#where">Venue</a><a href="#attire">Attire</a></nav>
+<main class="site">
+  <section class="sec hero" id="home"><img class="hf hf1" alt="" data-from="ftl"><img class="hf hf2" alt="" data-from="fbr">
+    
+    <p class="small script">Together with their families</p>
+    <p class="lead">you are cordially invited to the wedding of</p>
+    <h1 class="script">Winston<span class="amp">&amp;</span>Almira</h1>
+    <p class="tag" style="font-style:italic;margin:.6rem 0 0">Two hearts, one journey,<br>a lifetime of love.</p>
+    <div class="rule"></div>
+    <p class="date">January 21, 2027 (Thursday)</p>
+    <p class="time">10:00 AM</p>
+    <div class="count" role="timer" aria-label="Countdown to the wedding">
+      <div><strong id="d">–</strong><span>days</span></div><div><strong id="h">–</strong><span>hours</span></div><div><strong id="m">–</strong><span>minutes</span></div><div><strong id="s">–</strong><span>seconds</span></div>
+    </div>
+    <p class="hint">Scroll down<span class="arr">⌄</span></p>
+  </section>
+
+  <section class="sec" id="when">
+    <h2 class="script rv">Save the Date</h2>
+    <div class="orn2 rv">◆</div>
+    <div class="arch2 rv">
+      <div class="wash"></div><img class="hf ha" alt="" src="images/flower-arch.png">
+      <p class="mon">JANUARY</p><p class="yr">2027</p>
+      <div class="grid" id="cal"></div>
+      <div class="calinfo" id="calinfo"><b>Thursday, January 21</b><br>10:00 AM · Concepcion Hall of Justice</div>
+      <p class="tapnote" id="tapnote">Tap the 21st</p>
+    </div>
+    <a class="btn fill" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Winston+%26+Almira+Wedding&dates=20270121T100000/20270121T180000&ctz=Asia/Manila&location=Concepcion+Hall+of+Justice,+Concepcion,+Tarlac&details=Reception+at+11:00+AM,+RA+Private+Resort,+Blk+12+Lot+12+Sitio+Macabacle,+Concepcion,+Tarlac" target="_blank" rel="noopener">Add to my calendar</a>
+  </section>
+
+  <section class="sec" id="where">
+    <h2 class="script rv">The Celebration</h2>
+    <div class="orn2 rv">◆</div>
+    <div class="acc rv"><img class="af af-tl" alt="" src="images/card-flower-top-left.png">
+      <button class="ah" aria-expanded="false"><svg class="ic2" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="15" cy="12" r="9"/><circle cx="25" cy="12" r="9"/></svg><span class="script">Wedding Ceremony</span><b>Concepcion Hall of Justice</b><span class="tm">10:00 AM</span><i class="pl">+</i></button>
+      <div class="ap"><div><p>Thursday, January 21, 2027<br>10:00 AM</p><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Concepcion%20Hall%20of%20Justice%2C%20Concepcion%2C%20Tarlac" data-map-destination="Concepcion Hall of Justice, Concepcion, Tarlac" target="_blank" rel="noopener">Open in Maps</a></div></div>
+    </div>
+    <div class="vline rv"><i></i></div>
+    <div class="acc rv"><img class="af af-br" alt="" src="images/card-flower-bottom-right.png">
+      <button class="ah" aria-expanded="false"><svg class="ic2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 3h10l-1 7a4 4 0 01-8 0zM12 14v6M8 21h8"/></svg><span class="script">Reception</span><b>RA Private Resort</b><span class="tm">11:00 AM</span><i class="pl">+</i></button>
+      <div class="ap"><div><p>Thursday, January 21, 2027<br>11:00 AM</p><p>Blk 12 Lot 12 Sitio Macabacle,<br>Concepcion, Tarlac</p><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=RA%20Private%20Resort%2C%20Sitio%20Macabacle%2C%20Concepcion%2C%20Tarlac" data-map-destination="RA Private Resort, Sitio Macabacle, Concepcion, Tarlac" target="_blank" rel="noopener">Open in Maps</a></div></div>
+    </div>
+    <p class="tapnote">Tap a card for details</p>
+  </section>
+
+  <section class="sec" id="attire">
+    <img class="hf hf4" alt="" data-from="fbr">
+    <h2 class="script rv">Attire Guide</h2>
+    <div class="orn2 rv">◆</div>
+    <p class="rv" style="max-width:470px;margin:0 auto">We kindly encourage our guests to wear formal to semi-formal attire with these colors on our special day.</p>
+    <div class="pvw rv"><img class="pf" alt="" src="images/flower-bottom-right.png"><div class="pvc" id="pv" style="background:#8ea9c8"></div><span class="script" id="pvn">Dusty Blue</span></div>
+    <div class="palette rv" id="pal">
+      <button class="sw" data-c="#e2cda9" data-t="#1f3f6e"><div class="dot" style="background:#e2cda9"></div><b>Champagne</b></button>
+      <button class="sw" data-c="#f8f0e4" data-t="#1f3f6e"><div class="dot" style="background:#f8f0e4"></div><b>Ivory</b></button>
+      <button class="sw" data-c="#5b7fb0" data-t="#ffffff"><div class="dot" style="background:#5b7fb0"></div><b>French Blue</b></button>
+      <button class="sw sel" data-c="#8ea9c8" data-t="#14305c"><div class="dot" style="background:#8ea9c8"></div><b>Dusty Blue</b></button>
+      <button class="sw" data-c="#cfe3f3" data-t="#1f3f6e"><div class="dot" style="background:#cfe3f3"></div><b>Light Blue</b></button>
+    </div>
+    <p class="note rv">Kindly avoid wearing black.</p>
+  </section>
+
+  <footer class="end">
+    <div class="rule"></div>
+    <div class="script">With love,<br>Winston &amp; Almira</div>
+    <div class="end-date">January 21, 2027</div>
+    <button class="btn" id="love" style="background:transparent;cursor:pointer;font-family:inherit">♡ Tap to send some love</button>
+  </footer>
+</main>
+
+<audio id="bgMusic" src="audio/panaginip-background.mp3" preload="none" loop></audio>
+<script src="js/script.js"></script>
+</body>
+</html>
