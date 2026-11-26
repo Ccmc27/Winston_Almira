@@ -430,8 +430,8 @@ h1.script{font-size:clamp(3.3rem,16vw,5.6rem);line-height:1.3;margin:.1rem 0}
 #env .stage{transition:transform 1.2s ease}
 #env.opening .stage{transform:translateY(5svh)}
 
-/* no glow/puff over the open envelope: the contents simply slide out */
-.smoke,.spark,.burst,.glow{display:none!important}
+.smoke{top:77%;left:51%;animation-duration:1.7s;background:radial-gradient(circle,rgba(255,255,255,.8),rgba(207,223,242,.45) 55%,transparent 72%)}
+.spark{top:77%;left:51%;animation-duration:1.3s}
 
 /* open envelope built from the supplied back / pocket / contents images (canvas 1700x1575) */
 .openset{left:-8.9%;width:108%;aspect-ratio:1700/1575;transform:none}
