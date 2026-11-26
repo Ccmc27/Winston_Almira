@@ -11,7 +11,7 @@
 
 <br>
 
-<img src="assets/winston-almira-preview.png" width="100%" alt="Winston and Almira Wedding Invitation">
+<img src="invi.jpg" width="100%" alt="Winston and Almira Wedding Invitation">
 
 <br>
 
